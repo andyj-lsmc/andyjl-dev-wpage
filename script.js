@@ -1,5 +1,6 @@
 const revealElements = document.querySelectorAll('.reveal');
 const yearNode = document.getElementById('year');
+const typingTitle = document.querySelector('.typing-title');
 
 yearNode.textContent = new Date().getFullYear();
 
@@ -16,6 +17,36 @@ const observer = new IntersectionObserver(
 );
 
 revealElements.forEach((element) => observer.observe(element));
+
+if (typingTitle) {
+  const typingText = typingTitle.dataset.typingText ?? typingTitle.textContent;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  typingTitle.setAttribute('aria-label', typingText);
+
+  if (prefersReducedMotion) {
+    typingTitle.textContent = typingText;
+  } else {
+    typingTitle.textContent = '';
+    typingTitle.classList.add('is-typing');
+
+    let currentIndex = 0;
+    const typingSpeed = 48;
+
+    const typeNextCharacter = () => {
+      typingTitle.textContent = typingText.slice(0, currentIndex + 1);
+      currentIndex += 1;
+
+      if (currentIndex < typingText.length) {
+        window.setTimeout(typeNextCharacter, typingSpeed);
+      } else {
+        typingTitle.classList.remove('is-typing');
+      }
+    };
+
+    window.setTimeout(typeNextCharacter, 450);
+  }
+}
 
 const tiltCards = document.querySelectorAll('.tilt-card');
 
