@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de desarrollo full-stack con enfoque formal, interactivo y visualmente elegante.">
+  <title>Portafolio | Desarrollador Full-Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Happy+Monkey&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="background-orb orb-a"></div>
+  <div class="background-orb orb-b"></div>
+  <div class="background-grid"></div>
+
+  <header class="topbar" role="banner">
+    <a class="brand" href="#inicio" aria-label="Volver al inicio">AJD</a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <figure class="hero-photo">
+          <img src="images/andres.jpg" alt="Fotografía de perfil de un desarrollador full-stack" width="160" height="160" loading="eager" decoding="async">
+        </figure>
+        <p class="eyebrow">Desarrollador full-stack</p>
+        <h1 id="hero-title">Construyo experiencias web sobrias, rápidas y memorables.</h1>
+        <p class="lead">
+          Diseño y desarrollo interfaces con carácter profesional, animaciones finas y una base técnica sólida.
+          La idea es que tu trabajo se vea serio, moderno y fácil de explorar.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+            Ver proyectos
+          </a>
+          <a class="btn btn-secondary" href="#contacto">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8m18 0-9 6L3 8m18 0a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+            Contactar
+          </a>
+        </div>
+        <ul class="hero-metrics" aria-label="Resumen profesional">
+          <li>
+            <strong>+5</strong>
+            <span>áreas dominadas</span>
+          </li>
+          <li>
+            <strong>24/7</strong>
+            <span>pensado para escalar</span>
+          </li>
+          <li>
+            <strong>100%</strong>
+            <span>enfoque en claridad</span>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="hero-card reveal tilt-card" aria-label="Resumen profesional">
+        <div class="card-badge">Disponible para proyectos</div>
+        <h2>Portafolio con presencia editorial</h2>
+        <p>
+          Una composición con contraste controlado, luces suaves y microinteracciones para que cada sección se sienta viva sin distraer.
+        </p>
+        <ul class="card-stack">
+          <li>
+            <span>Frontend</span>
+            <strong>React, CSS, accesibilidad</strong>
+          </li>
+          <li>
+            <span>Backend</span>
+            <strong>Node.js, APIs, arquitectura</strong>
+          </li>
+          <li>
+            <span>Entrega</span>
+            <strong>Performance, detalle y orden</strong>
+          </li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section reveal" id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="section-heading">
+        <p class="eyebrow">Sobre mí</p>
+        <h2 id="sobre-mi-title">Formalidad con un toque humano.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="info-card">
+          <h3><span class="card-title-icon" aria-hidden="true">◎</span> Foco</h3>
+          <p>Trabajo la estructura, el ritmo visual y la narrativa de la página para que el contenido principal siempre tenga prioridad.</p>
+        </article>
+        <article class="info-card">
+          <h3><span class="card-title-icon" aria-hidden="true">◌</span> Interacción</h3>
+          <p>Uso animaciones delicadas, estados de hover y movimiento contextual para aportar dinamismo sin saturar la vista.</p>
+        </article>
+        <article class="info-card">
+          <h3><span class="card-title-icon" aria-hidden="true">◈</span> Resultado</h3>
+          <p>Un portafolio que inspira confianza, comunica criterio y deja claro que puedes construir soluciones completas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="section-heading">
+        <p class="eyebrow">Proyectos</p>
+        <h2 id="proyectos-title">Casos pensados para mostrar criterio y ejecución.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card tilt-card">
+          <div class="project-meta"><span class="meta-icon" aria-hidden="true">↗</span> Web institucional</div>
+          <h3>Consultoría elegante</h3>
+          <p>Landing premium orientada a generar confianza, con jerarquía visual clara y llamadas a la acción discretas.</p>
+          <ul>
+            <li>Animación de entrada suave</li>
+            <li>Diseño responsive</li>
+            <li>Mensajes de valor precisos</li>
+          </ul>
+          <a class="project-link" href="#contacto">
+            Ver detalle
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+          </a>
+        </article>
+        <article class="project-card tilt-card">
+          <div class="project-meta"><span class="meta-icon" aria-hidden="true">▣</span> Dashboard</div>
+          <h3>Panel operativo</h3>
+          <p>Interfaz con lectura rápida, tarjetas informativas y patrones visuales limpios para datos y métricas.</p>
+          <ul>
+            <li>Contraste moderado</li>
+            <li>Microinteracciones</li>
+            <li>Componentes escalables</li>
+          </ul>
+          <a class="project-link" href="#contacto">
+            Ver detalle
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+          </a>
+        </article>
+        <article class="project-card tilt-card">
+          <div class="project-meta"><span class="meta-icon" aria-hidden="true">◫</span> Producto digital</div>
+          <h3>Plataforma de marca</h3>
+          <p>Presentación centrada en storytelling, identidad y fluidez para mostrar producto, proceso y resultados.</p>
+          <ul>
+            <li>Bloques narrativos</li>
+            <li>Botones con presencia</li>
+            <li>Estética refinada</li>
+          </ul>
+          <a class="project-link" href="#contacto">
+            Ver detalle
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="habilidades" aria-labelledby="habilidades-title">
+      <div class="section-heading">
+        <p class="eyebrow">Habilidades</p>
+        <h2 id="habilidades-title">Stack equilibrado para construir de punta a punta.</h2>
+      </div>
+      <ul class="skills-wrap" aria-label="Lista de habilidades técnicas">
+        <li>HTML semántico</li>
+        <li>CSS moderno</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>APIs REST</li>
+        <li>UI/UX</li>
+        <li>Accesibilidad</li>
+        <li>Performance</li>
+      </ul>
+    </section>
+
+    <section class="section reveal" id="contacto" aria-labelledby="contacto-title">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-title">Listo para la siguiente colaboración.</h2>
+          <p>Si quieres, después de esta primera base puedo ayudarte a personalizar el contenido con tu nombre, proyectos reales y enlaces sociales.</p>
+        </div>
+        <div class="contact-actions" aria-label="Acciones de contacto">
+          <a class="btn btn-primary" href="mailto:tuemail@correo.com">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+            tuemail@correo.com
+          </a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5V18m0-8.5V6m0 3.5H10m-3.5 0V18m7-8.5V18m0-7.2c.6-1.1 1.7-1.8 3-1.8 2.2 0 3.5 1.5 3.5 4.3V18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn btn-secondary" href="https://github.com" target="_blank" rel="noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-2.7 16.6c.43.08.59-.19.59-.42v-1.47c-2.4.52-2.9-1.03-2.9-1.03-.39-1-.96-1.27-.96-1.27-.78-.54.06-.53.06-.53.86.06 1.32.89 1.32.89.77 1.31 2.03.93 2.53.71.08-.56.3-.94.55-1.16-1.92-.22-3.94-.96-3.94-4.27 0-.94.33-1.71.88-2.31-.09-.22-.38-1.1.08-2.29 0 0 .72-.23 2.36.88a8.1 8.1 0 0 1 4.29 0c1.64-1.11 2.36-.88 2.36-.88.46 1.19.17 2.07.08 2.29.55.6.88 1.37.88 2.31 0 3.32-2.03 4.05-3.96 4.27.31.27.6.81.6 1.63v2.41c0 .23.16.5.6.42A8.5 8.5 0 0 0 12 3.5Z" fill="currentColor"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Portafolio de desarrollo full-stack</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
