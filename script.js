@@ -4,6 +4,16 @@ const typingTitle = document.querySelector('.typing-title');
 
 yearNode.textContent = new Date().getFullYear();
 
+// Barra de progreso de lectura (Scroll Progress Bar)
+window.addEventListener('scroll', () => {
+  const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = totalScroll > 0 ? (window.scrollY / totalScroll) * 100 : 0;
+  const indicator = document.getElementById('scroll-indicator');
+  if (indicator) {
+    indicator.style.width = `${scrollPercent}%`;
+  }
+});
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -48,19 +58,28 @@ if (typingTitle) {
   }
 }
 
-const tiltCards = document.querySelectorAll('.tilt-card');
+const hoverGlowCards = document.querySelectorAll('.project-card, .info-card, .hero-card');
 
-tiltCards.forEach((card) => {
+hoverGlowCards.forEach((card) => {
   card.addEventListener('mousemove', (event) => {
     const bounds = card.getBoundingClientRect();
-    const offsetX = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const offsetY = (event.clientY - bounds.top) / bounds.height - 0.5;
+    const x = event.clientX - bounds.left;
+    const y = event.clientY - bounds.top;
 
-    card.style.transform = `perspective(1000px) rotateX(${offsetY * -4}deg) rotateY(${offsetX * 6}deg) translateY(-4px)`;
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
+
+    if (card.classList.contains('tilt-card')) {
+      const offsetX = x / bounds.width - 0.5;
+      const offsetY = y / bounds.height - 0.5;
+      card.style.transform = `perspective(1000px) rotateX(${offsetY * -4}deg) rotateY(${offsetX * 6}deg) translateY(-4px)`;
+    }
   });
 
   card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
+    if (card.classList.contains('tilt-card')) {
+      card.style.transform = '';
+    }
   });
 });
 
